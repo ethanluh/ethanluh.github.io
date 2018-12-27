@@ -10,6 +10,29 @@ img {
   width: 50%;
   height: 50%;
 }
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 2
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 .padding{
   padding-right: 50px;
   padding-left: 50px;
@@ -135,8 +158,27 @@ h1 {
   </div> 
   <a href="About%20Me.html#home">About Me</a>
   <a href="About%20This.html#home">About This Project</a>
+    <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+<div id="overlay" onclick="off()">
+  <div id="text">
+  Name: Ethan Luh
+  <br></br>
+  Date: Octoboer 1, 2018 - December 31, 2018
+  <br></br>
+  Resources: W3Schools, StacksOverflow
+  </div>
+</div>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 	<h1 align="center">Math</h1>
 
 	<p align="center" class="padding">I started math in first grade at Synapse School. Synapse wasn't the most mathematically advanced school, and I didn't really enjoy it. So, last year, when I transfered to Bullis, math was a little more difficult. However, with a bit of time, completing homework and learning became steadily easier. During summer break, I enrolled in CTY, a three week summer camp that focuses on a specific topic. I chose to do Data and Chance, and in three weeks, I learned a lot. When the camp ended, my love for math had strengthened. This school year, I am doing Euler Circle, a extracirricular activity that focusus on number theory. There, I learned the foundations of math, how to prove my conjectures, and advanced my mathematical knowelege. However, after all is said and done, I think CTY was my favorite, because it was a mix of understanding and doing.</p>

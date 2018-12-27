@@ -20,6 +20,29 @@ body, html {
     height: 100%;
     margin: 0;
 }
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 2
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 .title {
     position: absolute;
     top: 12%;
@@ -164,9 +187,28 @@ body, html {
   </div> 
   <a href="About%20Me.html#home">About Me</a>
   <a class="active">About This Project</a>
+    <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </div>
+<div id="overlay" onclick="off()">
+  <div id="text">
+  Name: Ethan Luh
+  <br></br>
+  Date: Octoboer 1, 2018 - December 31, 2018
+  <br></br>
+  Resources: W3Schools, StacksOverflow
+  </div>
+</div>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
  <div class="title"><h1>About This Project</h1></div>
 </div>  
 <div class="centered"> 

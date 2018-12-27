@@ -31,6 +31,29 @@ body, html {
     padding-right: 50px;
 
 }
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 2
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 .centerim {
     position: absolute;
     top: 70%;
@@ -168,9 +191,27 @@ body, html {
   </div> 
   <a href="About%20Me.html#home" class="active">About Me</a>
   <a href="About%20This.html#home">About This Project</a>
+    <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+<div id="overlay" onclick="off()">
+  <div id="text">
+  Name: Ethan Luh
+  <br></br>
+  Date: Octoboer 1, 2018 - December 31, 2018
+  <br></br>
+  Resources: W3Schools, StacksOverflow
+  </div>
+</div>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
 
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 <div style="padding-left:16px">
    <div class="title"><center><h1>About Myself</h1></center></div>
 </div>  <div class="centered"><p>Well, you already know to stuff like my name, my age, all my darkest secrets, so let's cut to the interesting stuff. When I answered all your Nueva Student Questionaire questions, I told you most there is to know about me.(Your questions are <i>really</i> good) However, I was only allowed to use 150 words, so here I will choose one of the questions that I think most important for you to know about and elaborate on it.

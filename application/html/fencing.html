@@ -5,7 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 2
+  cursor: pointer;
+}
 
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 h1 {
   font-family: "Comic Sans MS", cursive, sans-serif
 }
@@ -147,8 +169,27 @@ body {margin:0;font-family:Arial}
   </div> 
   <a href="About%20Me.html#home">About Me</a>
   <a href="About%20This.html#home">About This Project</a>
+  <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+<div id="overlay" onclick="off()">
+  <div id="text">
+  Name: Ethan Luh
+  <br></br>
+  Date: Octoboer 1, 2018 - December 31, 2018
+  <br></br>
+  Resources: W3Schools, StacksOverflow
+  </div>
+</div>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 	<h1 align="center">Fencing</h1>
   <div class="clearfix">
 <img class="img2" src="../Images/download.png" alt="Pineapple" width="170" height="170">
