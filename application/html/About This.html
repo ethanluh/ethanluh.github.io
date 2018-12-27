@@ -6,14 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {margin:0;font-family:Arial}
-p {
-	color: black;
-}
-th, td, tr, table {
-  color: black;
-}
 h1{
-	color: black;
 	font-family: "Comic Sans MS", cursive, sans-serif
 }
 body, html {
@@ -30,7 +23,7 @@ body, html {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.75);
-  z-index: 2
+  z-index: 200
   cursor: pointer;
 }
 
@@ -190,15 +183,8 @@ body, html {
     <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-<div id="overlay" onclick="off()">
-  <div id="text">
-  Name: Ethan Luh
-  <br></br>
-  Date: Octoboer 1, 2018 - December 31, 2018
-  <br></br>
-  Resources: W3Schools, StacksOverflow
-  </div>
-</div>
+
+
 <script>
 function on() {
   document.getElementById("overlay").style.display = "block";
@@ -226,7 +212,15 @@ function off() {
 </div>
 <div class="bg"></div>
 <div style="padding-left:16px">
-
+<div id="overlay" onclick="off()">
+  <div id="text">
+  Name: Ethan Luh
+  <br></br>
+  Date: Octoboer 1, 2018 - December 31, 2018
+  <br></br>
+  Resources: W3Schools, StacksOverflow
+  </div>
+</div>
 </script>
 </body>
 </html>

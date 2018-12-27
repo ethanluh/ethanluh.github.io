@@ -41,7 +41,7 @@ body, html {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.75);
-  z-index: 2
+  z-index: 10
   cursor: pointer;
 }
 
@@ -194,15 +194,7 @@ body, html {
     <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-<div id="overlay" onclick="off()">
-  <div id="text">
-  Name: Ethan Luh
-  <br></br>
-  Date: Octoboer 1, 2018 - December 31, 2018
-  <br></br>
-  Resources: W3Schools, StacksOverflow
-  </div>
-</div>
+
 <script>
 function on() {
   document.getElementById("overlay").style.display = "block";
@@ -223,6 +215,15 @@ First, my interests. As I said in the Questionaire, I enjoy fencing, programming
   
 	
 	<br clear="left">
+	<div id="overlay" onclick="off()">
+  <div id="text">
+  Name: Ethan Luh
+  <br></br>
+  Date: Octoboer 1, 2018 - December 31, 2018
+  <br></br>
+  Resources: W3Schools, StacksOverflow
+  </div>
+</div>
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -232,6 +233,7 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
 </script>
 </body>
 </html>
