@@ -1,32 +1,15 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About This Project</title>
+	<title>Fencing</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.table{
-	padding-right:20px;
-	padding-left: 20px;
-}
 .name{
-	float:right;
-	padding-right:20px;
 	color:white;
-}
-body {margin:0;font-family:Arial}
-h1{
-	font-family: "Comic Sans MS", cursive, sans-serif
-}
-.left{
-	padding-left:50px;
-}
-.right{
-	padding-right:50px;
-}
-body, html {
-    height: 100%;
-    margin: 0;
+	padding-right:20px;
+	float:right;
 }
 #overlay {
   position: fixed;
@@ -38,10 +21,9 @@ body, html {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.75);
-  z-index: 200
+  z-index: 2
   cursor: pointer;
 }
-
 #text{
   position: absolute;
   top: 50%;
@@ -51,35 +33,43 @@ body, html {
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
-.title {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif
 }
-
+.clearfix {
+    overflow: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.img2 {
+    float: left;
+    width: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.img3 {
+    float: right;
+    width: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+body {margin:0;font-family:Arial}
 .centered {
     position: absolute;
-    top: 25%;
-
-}
-.bg {
-    /* The image used */
-    background-image: url("../Images/wave2.gif");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    top: 30%;
+    left: 60%;
+    transform: translate(0%, -30%);
 }
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
-
+.vid{
+	padding-left:70px;
+	padding-top:20px;
+	height:75%;
+	width:75%;
+}
 .topnav a {
   float: left;
   display: block;
@@ -89,21 +79,17 @@ body, html {
   text-decoration: none;
   font-size: 17px;
 }
-
 .active {
   background-color: #ff0000;
   color: white;
 }
-
 .topnav .icon {
   display: none;
 }
-
 .dropdown {
     float: left;
     overflow: hidden;
 }
-
 .dropdown .dropbtn {
     font-size: 17px;    
     border: none;
@@ -114,7 +100,6 @@ body, html {
     font-family: inherit;
     margin: 0;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -123,7 +108,6 @@ body, html {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
 .dropdown-content a {
     float: none;
     color: black;
@@ -132,21 +116,17 @@ body, html {
     display: block;
     text-align: left;
 }
-
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
 }
-
 .dropdown-content a:hover {
     background-color: #ddd;
     color: black;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
@@ -156,7 +136,6 @@ body, html {
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -177,59 +156,25 @@ body, html {
     text-align: left;
   }
 }
-
 </style>
 </head>
 <body>
 <div class="topnav" id="myTopnav">
   <a href="../index.html#home">Home</a>
   <div class="dropdown">
-    <button class="dropbtn">Hobbies 
+    <button class="dropbtn" class="active">Hobbies 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="fencing.html">Fencing</a>
+      <a class="active">Fencing</a>
       <a href="math.html">Math</a>
     </div>
   </div>
-  <a class="active">About This Project</a>
-    <a onclick="on()">My Page Info</a>
-    <p class="name">Ethan Luh's My Page</p>
+  <a href="About%20This.html#home">About This Project</a>
+  <a onclick="on()">My Page Info</a>
+  <p class="name">Ethan Luh's Nueva My Page</p>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-
-
-<script>
-function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
-</script>
- <div class="title"><h1>About This Project</h1></div>
-</div>  
-<div class="centered"> 
-  <table class="table">
-    <tr>
-      <th><h1>The Process</h1></th>
-      <td>To code this website, I used two languages; HTML and CSS. The entire website took about three months to code, and I spent a lot of it researching and looking at websites. Mainly, I used two websites called W3Schools and StacksOverflow. W3Schools is a programming "school" and it taught me a lot of the necessary elements of a website. I used StacksOverflow to read other people's questions that related to mine. The rest of the time, I spent coding this website, which took me almost as long.</td>
-    </tr>
-    <tr>
-      	<td>One of the problems that I ran into was programming experienceThese caused me trouble, because my lack of experience programming made it hard to troubleshoot the problems that I had. So, when I had problems, I resorted to searching up certain topics on W3Schools. This leads me to my next problem, finding the right resources. In the beginning, I was, so to speak, a complete wreck. But, with perserverence, and a little help from my dad, I was able to pull through.</td>
-    	<th><h1>The Problems</h1></th>
-    </tr>
-    <tr>
-    	<th><h1>The Solutions</h1></th>
-     	<td class="right">In each scenario, I had a solution at hand. If I had trouble programming a specific part in the website, I looked it up online. When that did not solve my problem, I would go through each and every section in W3Schools. In a way, My computer was a school to me. It provided every resource that a teacher would provide to me at school. But, at home, if you want to learn something on your own, you have to have your own motivation. And the prospect of getting into Nueva, was enough to get me to the end.</td>
-
-     </tr>
-
-</table>
-</div>
-<div class="bg"></div>
-<div style="padding-left:16px">
 <div id="overlay" onclick="off()">
   <div id="text">
   Name: Ethan Luh
@@ -239,6 +184,27 @@ function off() {
   Resources: W3Schools, StacksOverflow
   </div>
 </div>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 </script>
+	<h1 align="center">Fencing</h1>
+  <div class="clearfix">
+<img class="img2" src="../Images/download.png" alt="Pineapple" width="170" height="170">
+Fencing is a combat sport, but it is also a sport for gentlemen. Usually, fencing was used to show that you were willing to risk your life to restore your honor, whether someone insulted you, or you did something cowardly, rather than to kill.
+<br><br> 
+Fencing was a sport that I started when I was very young. When I started, I was about 6, a little boy on an adventure at a "superhero camp". We were coming back the gym, when I saw some people, holding swords and hitting each other. I thought to myself, "Hey, that looks like something a superhero would do!" As you can probably tell, I was <i>really</i> into superheroes. When I returned home, I was talking to my mom very diplomatically with all the benefits of joining fencing, and she agreed to look into it. When she spoke to me a week later, I was very excited. It was “a dream come true”. I thought I was about to become a Musketeer. I told her "This is what I want to do." So, she found a local fencing club, and put me there as a intro class. However, I was too little and too weak to hold up a foil, so the coach told me to wait a year or two, and come back when I was ready. I had asked my mother every week, "Can I go back yet?", and every time the answer was "Coach told you to wait a year or two, not a couple weeks." Eventually, I realized that I would have to wait the entire year, so I stopped asking. When my time passed, my mother asked me if I wanted to go back. Immediately, I realized that it was time. I had started out with all the other newer kids, but I eventually moved up, where I found I was no longer the top of the class. So, I wo rked hard, and got faster and stronger. When I finally moved to the advanced class, I started over again, and now I am working to become even better. <br><br> 
+<img class="img3" src="../Images/podium.jpg" alt="Pineapple">
+I enjoy fencing because when I get on the strip, nothing else matters. When it is just me and my opponent, I stop and let my mind take over. I enjoy the rush of adrenaline, and all the energy. I enjoy the challenge that my opponent gives me to win. And when I do win, especially when it is 14-14, I enjoy feeling all the energy and nervousness leave my body, and elation entering me, so I can relax. I get the same feelings when I lose, but instead of elation, I feel resignation, until the next event. Between those times, I review the bout and see what I did wrong and how I can fix it. But I also have people I look to, people who are my idols. Alexander Massialas is one of them. An American foil fencer he won a silver medal in the team event in 2014, earned a silver medal for the 2016 Summer Olympics, and won bronze with the US Men's Team event that same year. He stays cool under pressure and almost never shows signs of anger on the strip. Even cooler, his dad is a coach for Team USA! <br><br>
+
+ Some of my short term goals, for say the next year or two, are things I have not yet accomplished. One is to get a silver or gold in Youth 12 or 14, to fence and get top 8 in the Fencing Junior Olympics. Some long term goals that I have are to fence in the 2024 Paris Olympics. Some steps that I need to take include training hard, practicing at home, on my own, and improving skills that I use in fencing using other sports, such as track and field to improve my stamina, gymnastics to improve my upper body strength, and strength training to improve my upper body as well. </div>
+<video class="vid" controls>
+	<source src="../Images/ethanfencingmoments.mp4" type="video/mp4">
+	<source src="../Images/ethanfencingmoments.ogg" type="video/ogg">
+</video>
 </body>
 </html>
