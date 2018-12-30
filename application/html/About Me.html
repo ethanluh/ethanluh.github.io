@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About This Project</title>
+	<title>About Me</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {margin:0;font-family:Arial}
-h1{
-	font-family: "Comic Sans MS", cursive, sans-serif
+h1 {
+  color: black;
+  font-family: "Comic Sans MS",cursive, sans-serif
 }
-.left{
-	padding-left:50px;
+.img2 {
+    float: left;
+    width: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-.right{
-	padding-right:50px;
+p {
+  color: black;
+  text-indent: 50px;
 }
 body, html {
     height: 100%;
     margin: 0;
+}
+.title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered {
+    position: absolute;
+    top: 30%;
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
 #overlay {
   position: fixed;
@@ -29,9 +47,10 @@ body, html {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.75);
-  z-index: 200
+  z-index: 10
   cursor: pointer;
 }
+
 #text{
   position: absolute;
   top: 50%;
@@ -41,21 +60,19 @@ body, html {
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
-.title {
+.centerim {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.centered {
-    position: absolute;
-    top: 40%;
+    top: 70%;
+    left: 60%;
+    transform: translate(-50%, -40%);
 }
 .bg {
     /* The image used */
-    background-image: url("../Images/wave2.gif");
+    background-color:turquoise;
+
     /* Full height */
     height: 100%; 
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -65,6 +82,7 @@ body, html {
   overflow: hidden;
   background-color: #333;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -74,17 +92,21 @@ body, html {
   text-decoration: none;
   font-size: 17px;
 }
+
 .active {
   background-color: #ff0000;
   color: white;
 }
+
 .topnav .icon {
   display: none;
 }
+
 .dropdown {
     float: left;
     overflow: hidden;
 }
+
 .dropdown .dropbtn {
     font-size: 17px;    
     border: none;
@@ -95,6 +117,7 @@ body, html {
     font-family: inherit;
     margin: 0;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -103,6 +126,7 @@ body, html {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     float: none;
     color: black;
@@ -111,17 +135,21 @@ body, html {
     display: block;
     text-align: left;
 }
+
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
 }
+
 .dropdown-content a:hover {
     background-color: #ddd;
     color: black;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
@@ -131,6 +159,7 @@ body, html {
     display: block;
   }
 }
+
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -153,7 +182,7 @@ body, html {
 }
 </style>
 </head>
-<body>
+<body style="background-color: turquoise;">
 <div class="topnav" id="myTopnav">
   <a href="../index.html#home">Home</a>
   <div class="dropdown">
@@ -164,40 +193,34 @@ body, html {
       <a href="fencing.html">Fencing</a>
       <a href="math.html">Math</a>
     </div>
-  </div>
-  <a class="active">About This Project</a>
+  </div> 
+  <a href="About%20Me.html#home" class="active">About Me</a>
+  <a href="About%20This.html#home">About This Project</a>
     <a onclick="on()">My Page Info</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-
 
 <script>
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
+
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
 </script>
- <div class="title"><h1>About This Project</h1></div>
-</div>  
-<div class="centered"> 
-  <table>
-    <tr>
-      <th><h1>The Process</h1></th>
-      <th><h1>The Problems</h1></th>
-      <th><h1>The Solutions</h1></th>
-    </tr>
-    <tr>
-      <td class="left"><p>To code this website, I used two languages; HTML and CSS. The entire website took about three months to code, and I spent a lot of it researching and looking at websites. Mainly, I used two websites called W3Schools and StacksOverflow. W3Schools is a programming "school" and it taught me a lot of the necessary elements of a website. I used StacksOverflow to read other people's questions that related to mine. The rest of the time, I spent coding this website, which took me almost as long.</p></td>
-      <td>One of the problems that I ran into was programming experienceThese caused me trouble, because my lack of experience programming made it hard to troubleshoot the problems that I had. So, when I had problems, I resorted to searching up certain topics on W3Schools. This leads me to my next problem, finding the right resources. In the beginning, I was, so to speak, a complete wreck. But, with perserverence, and a little help from my dad, I was able to pull through.</td>
-      <td class="right">In each scenario, I had a solution at hand. If I had trouble programming a specific part in the website, I looked it up online. When that did not solve my problem, I would go through each and every section in W3Schools. In a way, My computer was a school to me. It provided every resource that a teacher would provide to me at school. But, at home, if you want to learn something on your own, you have to have your own motivation. And the prospect of getting into Nueva, was enough to get me to the end.</td>
-    </tr>
-</table>
-</div>
-<div class="bg"></div>
 <div style="padding-left:16px">
-<div id="overlay" onclick="off()">
+   <div class="title"><center><h1>About Myself</h1></center></div>
+</div>  <div class="centered"><p><img class="img2" src="../Images/firstplace.png" alt="Pineapple">When I answered all your Nueva Student Questionaire questions, I answered to the best of my ability. However, I was only allowed to use 150 words, so here I will choose one of the questions that I think most important for you to know about and elaborate on it.
+</p>
+<p>
+First, my interests. As I said in the Questionaire, I enjoy fencing, programming, reading, gymnastics and violin, but I didn't say anything about why I chose them. And if you know my motivation, you know more about me. I'll only talk about the ones that don't have their own page, so that is reading and violin. I started getting really interested in reading in first and second grade at Synapse, a school similar to Nueva. When I was taught to read, I was interested. My teachers taught me to read and understand words by having us sound out the syllables and look at similar words. In this way, we were to guess at the meaning of the words. When I found a book that I wanted to read, I read it until I knew every word in it. I enjoyed books, magazines, anything that I could get my hands on. This is why I enjoy reading so much. Violin on the other hand, I started not because of anyone else, but because I wanted to do all the things violinists can do. Piano, which was the instrument that I played before, is fun, but it requires you to stay still, in your seat. The keys are set and can't move, and everything is there for you. Piano is also the base for all other instruments in my opinion, because you can do almost anything on the piano, and it is easier to learn theory and tempo. Violin on the other hand, there are millions of places you can place your fingers on the strings, and you are free to move around. That is why I chose violin instead of piano.
+</p></div>
+<div class="bg"></div>
+  
+	
+	<br clear="left">
+	<div id="overlay" onclick="off()">
   <div id="text">
   Name: Ethan Luh
   <br></br>
@@ -206,6 +229,16 @@ function off() {
   Resources: W3Schools, StacksOverflow
   </div>
 </div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
 </script>
 </body>
 </html>
